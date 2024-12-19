@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaxsiy Ma'lumotlar</title>
+    <style>
+        h1{
+            text-align: center;
+            color: #39303A;
+        }
+        form{
+            height: 525px;
+            width: 350px;
+            background-color: white;
+            max-width: 400;
+            margin: 50px auto;
+            display: block;
+            padding: 25px;
+            border-radius: 15px;
+        }
+        body{
+            background-color: #F5F4F9;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label{
+            color: #56565D;
+            font-weight: 600;
+        }
+        input[type="text"],[type="email"],[type="number"]{
+            color: black;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 7px;
+            border-color: #a0a0a0;
+            border-radius: 3px;
+            border-style: solid;
+            border-width: 1px;
+            margin-top: 10px;
+        }
+        input[type="submit"],[type="reset"]{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            margin-right: 0px;
+        }
+        input[type="submit"]{
+            background-color: #49B052;
+        }
+        input[type="reset"]{
+            background-color: #dc3641;
+        }
+        input[type="text"]:focus,[type="email"]:focus, [type="number"]:focus{
+            box-shadow: 0 0 5px #017bff;
+            border: solid 1px #017bff;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/submit-personal-info" method="post">
+        <h1>Shaxsiy Ma'lumotlarni Kiritish</h1>
+        <label for="ism">Ismingiz:</label><br>
+        <input type="text" id="ism" name="ism" placeholder="Ismingizni kiriting" required><br><br>
+
+        <label for="familiya">Familiyangiz:</label><br>
+        <input type="text" id="familiya" name="familiya" placeholder="Familiyangizni kiriting" required><br><br>
+
+        <label for="email">Email manzilingiz:</label><br>
+        <input type="email" id="email" name="email" placeholder="Email manzilingizni kiriting" required><br><br>
+
+        <label for="yosh">Yoshingiz:</label><br>
+        <input type="number" id="yosh" name="yosh" placeholder="Yoshingizni kiriting" required><br><br>
+
+        <label for="jins">Jinsingiz:</label><br>
+        <input type="radio" id="erkak" name="jins" value="erkak" required>
+        <label for="erkak">Erkak</label>
+        <input type="radio" id="ayol" name="jins" value="ayol" required>
+        <label for="ayol">Ayol</label><br><br>
+
+        <input type="submit" value="Ma'lumotni yuborish">
+        <input type="reset" value="Tozalash">
+    </form>
+</body>
+
+</html>
